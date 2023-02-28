@@ -18,18 +18,28 @@
     <div class="container">
       <div class="vanilla-app-wrapper">
         <div class="vanilla-app">
-          <h1>London</h1>
-          <ul>
-            <li>Tuesday 00:30</li>
-            <li>Clear</li>
-          </ul>
+          <div class="overview">
+            <h1>London</h1>
+            <ul>
+              <li>Tuesday 00:30</li>
+              <li>Cloudy</li>
+            </ul>
+          </div>
           <div class="row">
             <div class="col-6">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                alt="Clear"
-              />
-              3°C | °F
+              <div class="d-flex vanilla-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                  alt="Cloudy"
+                />
+                <div>
+                  <strong>3</strong
+                  ><span class="units"><span class="celsius"> °C</span> |<span
+                    class="fahrenheit"
+                    ><a href="#">°F</a></span
+                  ></span>
+                </div>
+              </div>
             </div>
             <div class="col-6">
               <ul>
