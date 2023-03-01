@@ -51,9 +51,11 @@ function displayTemperature(response) {
 
 let apiKey = "e8t47038af810df0bb6dd6e04ac3o3b1";
 
+let city = "London";
+
 let units = "metric";
 
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=london&key=${apiKey}&units=${units}`;
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
 console.log(apiUrl);
 
