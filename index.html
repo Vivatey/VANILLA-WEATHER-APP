@@ -19,10 +19,10 @@
       <div class="vanilla-app-wrapper">
         <div class="vanilla-app">
           <div class="overview">
-            <h1>London</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Tuesday 00:30</li>
-              <li>Cloudy</li>
+              <li id="description">Cloudy</li>
             </ul>
           </div>
           <div class="row">
@@ -33,7 +33,7 @@
                   alt="Cloudy"
                 />
                 <div>
-                  <strong>3</strong
+                  <strong id="temperature"></strong
                   ><span class="units"><span class="celsius"> °C</span> |<span
                     class="fahrenheit"
                     ><a href="#">°F</a></span
@@ -43,9 +43,8 @@
             </div>
             <div class="col-6">
               <ul>
-                <li>Precipitation: 2%</li>
-                <li>Humidity: 77%</li>
-                <li>Wind: 4 km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
