@@ -80,3 +80,22 @@ li:first-letter {
 .units a {
   text-decoration: none;
 }
+
+.vanilla-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.vanilla-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.vanilla-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.vanilla-forecast-temperatures {
+  font-size: 13px;
+}
