@@ -61,3 +61,13 @@ li:first-letter {
   line-height: 30px;
   vertical-align: top;
 }
+
+.vanilla-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
+}
+
+.vanilla-temperature .active:hover {
+  text-decoration: none;
+}
