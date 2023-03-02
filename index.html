@@ -15,52 +15,74 @@
     <title>Vanilla Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <div class="vanilla-app-wrapper">
-        <div class="vanilla-app">
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="description">Cloudy</li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="d-flex vanilla-temperature">
-                <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
-                  alt="Cloudy"
-                  id="icon"
-                />
-                <div>
-                  <strong id="temperature"></strong
-                  ><span class="units"
-                    ><span class="celsius"> °C</span> |<span class="fahrenheit"
-                      ><a href="#">°F</a></span
-                    ></span
-                  >
+    <body>
+      <div class="container">
+        <div class="vanilla-app-wrapper">
+          <div class="vanilla-app">
+            <form id="search-form" class="mb-3">
+              <div class="row">
+                <div class="col-md-9">
+                  <input
+                    type="search"
+                    placeholder="Enter a city.."
+                    class="form-control shadow-sm w-100"
+                    autofocus="on"
+                    autocomplete="off"
+                    id="city-input"
+                  />
+                </div>
+                <div class="col-md-3">
+                  <input
+                    type="submit"
+                    value="search"
+                    class="btn btn-dark shadow-sm w-100"
+                  />
                 </div>
               </div>
-            </div>
-            <div class="col-6">
+            </form>
+            <div class="overview">
+              <h1 id="city"></h1>
               <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
+                <li>Last updated: <span id="date"></span></li>
+                <li id="description">Cloudy</li>
               </ul>
             </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="d-flex vanilla-temperature">
+                  <img
+                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
+                    alt="Cloudy"
+                    id="icon"
+                  />
+                  <div>
+                    <strong id="temperature"></strong
+                    ><span class="units"
+                      ><span class="celsius"> °C</span> |<span class="fahrenheit"
+                        ><a href="#">°F</a></span
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> km/h</li>
+                </ul>
+              </div>
+            </div>
           </div>
+          <small>
+            <a
+              href="https://github.com/Vivatey/VANILLA-WEATHER-APP"
+              target="_blank"
+              >Open-source code</a
+            >, by Viv
+            <a href="#" target="_blank">hosted on Netlify.</a>
+          </small>
         </div>
-        <small>
-          <a
-            href="https://github.com/Vivatey/VANILLA-WEATHER-APP"
-            target="_blank"
-            >Open-source code</a
-          >, by Viv
-          <a href="#" target="_blank">hosted on Netlify.</a>
-        </small>
       </div>
-    </div>
     <script src="src/app.js"></script>
   </body>
 </html>

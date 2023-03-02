@@ -64,14 +64,28 @@ function displayTemperature(response) {
   console.log(response.data.condition.icon);
 }
 
-let apiKey = "e8t47038af810df0bb6dd6e04ac3o3b1";
+function search(city) {
+  let apiKey = "e8t47038af810df0bb6dd6e04ac3o3b1";
+  
+  let units = "metric";
 
-let city = "London";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
-let units = "metric";
+  console.log(apiUrl);
 
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-console.log(apiUrl);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
 
-axios.get(apiUrl).then(displayTemperature);
+  console.log(cityInputElement);
+  console.log(cityInputElement.value);
+}
+
+search("London");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
