@@ -62,27 +62,8 @@ li:first-letter {
   vertical-align: top;
 }
 
-/* .vanilla-temperature .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-  text-decoration: none;
-}
-
-.vanilla-temperature .active:hover {
-  text-decoration: none;
-} */
-
-.units .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-}
-
-.units a {
-  text-decoration: none;
-}
-
 .vanilla-forecast {
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
   color: #000;
 }
