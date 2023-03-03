@@ -27,6 +27,37 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
+
+  let forecastHTML = `<div class=row>`;
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML +
+      `
+        <div class="col-2">
+          <div class="vanilla-forecast-date">${day}</div>
+          <img
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+            alt=""
+            width="42"
+          />
+          <div class="vanilla-forecast-temperatures">
+            <span class="vanilla-forecast-temperature-max">9°</span>
+            <span class="vanilla-forecast-temperature-min">3°</span>
+          </div>
+        </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
+
 function displayTemperature(response) {
   console.log(response);
   console.log(response.data);
@@ -66,6 +97,7 @@ function displayTemperature(response) {
   console.log(response.data.condition.icon);
 }
 
+
 function search(city) {
   let apiKey = "e8t47038af810df0bb6dd6e04ac3o3b1";
 
@@ -78,6 +110,7 @@ function search(city) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
@@ -86,6 +119,7 @@ function handleSubmit(event) {
   console.log(cityInputElement);
   console.log(cityInputElement.value);
 }
+
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
@@ -100,6 +134,7 @@ function displayFahrenheitTemperature(event) {
 
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
@@ -124,3 +159,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("London");
+
+displayForecast();
