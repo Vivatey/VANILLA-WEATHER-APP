@@ -1,5 +1,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/949/original/quiraing.jpg?1677901084");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -36,8 +39,11 @@ li:first-letter {
 
 .vanilla-app {
   padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
+  /* border: 1px solid #dadde1; */
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  /* background: rgba(255, 255, 255, 0.7); */
+  /* box-shadow: rgb(0 0 0 / 20%); */
 }
 
 .overview {
@@ -79,4 +85,8 @@ li:first-letter {
 
 .vanilla-forecast-temperatures {
   font-size: 13px;
+}
+
+a {
+  color: #fff;
 }

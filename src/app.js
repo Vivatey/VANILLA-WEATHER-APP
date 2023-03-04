@@ -59,7 +59,7 @@ function displayForecast(response) {
           <div class="vanilla-forecast-temperatures">
             <span class="vanilla-forecast-temperature-max">${Math.round(
               forecastDay.temperature.maximum
-            )}°</span>
+            )}° |
             <span class="vanilla-forecast-temperature-min">${Math.round(
               forecastDay.temperature.minimum
             )}°</span>
@@ -119,8 +119,6 @@ function search(city) {
   let units = "metric";
 
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
-
-  console.log(apiUrl);
 
   axios.get(apiUrl).then(displayTemperature);
 }
